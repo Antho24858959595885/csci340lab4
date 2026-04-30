@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(30, 60, 35);
+    background-color: rgb(230, 250, 230);
+}
+
+h1 {
+    color: rgb(34, 120, 55);
+}
+
+#zoo-exhibit {
+    background-color: rgb(200, 235, 205);
+}
+
+#animal-picture-box {
+    background-color: white;
+}
+
+button {
+    margin: 5px;
+}
