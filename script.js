@@ -17,8 +17,12 @@ $("#animal-button").on("click", function(event) {
 });
 
 $("#color-button").on("click", function(event) {
-    $("#zoo-exhibit").css("background-color", "rgb(175, 220, 255)");
-    $("#zoo-message").text("The exhibit color changed.");
+    $("#zoo-message").text("New color loading...");
+
+    $.getJSON("https://x-colors.yurace.pro/api/random", function(data) {
+        $("#zoo-exhibit").css("background-color", data.hex);
+        $("#zoo-message").text("The show color changed.");
+    });
 });
 
 $("#feed-button").on("click", function(event) {
