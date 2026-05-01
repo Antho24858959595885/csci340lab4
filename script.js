@@ -1,7 +1,7 @@
 var timesFed = 0;
 
 $("#animal-button").on("click", function(event) {
-    $("#zoo-message").text("Looking for a random animal...");
+    $("#zoo-message").text("Looking for a random dog...");
 
     $.getJSON("https://dog.ceo/api/breeds/image/random", function(data) {
         $("#animal-name").text("Random dog");
@@ -23,14 +23,14 @@ $("#color-button").on("click", function(event) {
 
 $("#feed-button").on("click", function(event) {
     timesFed = timesFed + 1;
-    $("#zoo-message").text("Yum! you fed the animal " + timesFed + " times.");
+    $("#zoo-message").text("Yum! you gave the dog  " + timesFed + " treats.");
 });
 
 $("#reset-button").on("click", function(event) {
     timesFed = 0;
-    $("#animal-name").text("Mystery Animal");
-    $("#animal-picture-box").text("Animal pic here.");
-    $("#animal-fact").text("animal fact here");
+    $("#animal-name").text("Mystery Dog");
+    $("#animal-picture-box").text("Dog pic here.");
+    $("#animal-fact").text("Dog fact here");
     $("#zoo-exhibit").css("background-color", "rgb(235, 245, 225)");
-    $("#zoo-message").text("The zoo is ready for visitors!");
+    $("#zoo-message").text("The puppies are ready to meet you!");
 });
