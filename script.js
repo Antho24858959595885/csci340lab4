@@ -1,6 +1,8 @@
 var timesFed = 0;
 
 $("#animal-button").on("click", function(event) {
+    $("#zoo-message").text("Trying to get an animal...");
+
     $.getJSON("https://zoo-animal-api.herokuapp.com/animals/rand", function(data) {
         $("#animal-name").text(data.name);
 
