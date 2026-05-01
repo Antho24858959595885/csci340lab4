@@ -10,7 +10,7 @@ $("#animal-button").on("click", function(event) {
             "<img src='" + data.message + "' alt='A random dog' width='300'>"
         );
 
-        $("#animal-fact").text("This dog just got added to the wack zoo.");
+        $("#animal-fact").text("This dog just got added to the show.");
 
         $("#zoo-message").text("looks like we got a doggy in the house!");
     });
