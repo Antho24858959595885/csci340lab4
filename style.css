@@ -1,7 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Nunito", sans-serif;
     color: rgb(40, 40, 40);
     background-color: rgb(245, 245, 235);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Fredoka", sans-serif;
 }
 
 h1 {
