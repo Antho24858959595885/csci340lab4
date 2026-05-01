@@ -1,22 +1,18 @@
 var timesFed = 0;
 
 $("#animal-button").on("click", function(event) {
-    $("#zoo-message").text("Trying to get an animal...");
+    $("#zoo-message").text("Looking for a random animal...");
 
-    $.getJSON("https://zoo-animal-api.herokuapp.com/animals/rand", function(data) {
-        $("#animal-name").text(data.name);
+    $.getJSON("https://dog.ceo/api/breeds/image/random", function(data) {
+        $("#animal-name").text("Random dog");
 
         $("#animal-picture-box").html(
-            "<img src='" + data.image_link + "' alt='A picture of a " + data.name + "' width='300'>"
+            "<img src='" + data.message + "' alt='A random dog' width='300'>"
         );
 
-        $("#animal-fact").html(
-            "This is a " + data.name + "." +
-            "<br>Habitat: " + data.habitat +
-            "<br>Diet: " + data.diet
-        );
+        $("#animal-fact").text("This dog just got added to the wack zoo.");
 
-        $("#zoo-message").text("looks like we got a " + data.name + " in the house!");
+        $("#zoo-message").text("looks like we got a doggy in the house!");
     });
 });
 
